@@ -1,0 +1,7 @@
+form {
+    background-color: lightblue;
+}
+
+form > div {
+    padding: 1.25rem;
+}
