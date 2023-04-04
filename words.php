@@ -22,6 +22,9 @@
     // Ricevo la parola sostitutiva
     $replacement = $_GET["replacement"];
 
+    // Conto quante volte viene trovata la parola
+    $occurrencies = substr_count(strtolower($words), strtolower($to_replace));
+
     // Modifico la frase, sostituendo ogni parola scuola con la parola boolean presenti in $words
     $modifiedWords = str_ireplace($to_replace, $replacement, $words);
     // Conto le parole nella frase
@@ -33,7 +36,8 @@
     <section>
         <h3>La frase inserita è composta da <?php echo $word_count ?> parole.</h3>
         <p><?php echo $words ?></p>
-
+        <hr>
+        <h2>Ho trovato <?php echo $occurrencies ?> volte la parola <?php echo $to_replace ?> e l'ho sostituita con <?php echo $replacement ?></h2>
         <h3>La frase modificata è composta da <?php echo $modifiedWords_count ?> parole.</h3>
         <p><?php echo $modifiedWords ?></p>
     </section>
