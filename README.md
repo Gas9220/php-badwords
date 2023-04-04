@@ -6,3 +6,11 @@ This is a simple PHP project to familiarize with the basics of the language. Use
 
 2. - How many occurences founded
    - The modified phrase
+
+FORM
+
+![form](./readme-img/form.JPG "form")
+
+RESULT
+
+![result](./readme-img/result.JPG "result")
