@@ -17,19 +17,27 @@
     // TEST Stampo la frase originale
     //echo "La frase inserita è: {$words}. La frase contiene: {$word_count} parole";
 
+    // Ricevo la parola che voglio sostiuire
+    $to_replace = $_GET["to-replace"];
+    // Ricevo la parola sostitutiva
+    $replacement = $_GET["replacement"];
+
     // Modifico la frase, sostituendo ogni parola scuola con la parola boolean presenti in $words
-    $modifiedWords = str_replace("scuola", "boolean", $words);
+    $modifiedWords = str_ireplace($to_replace, $replacement, $words);
     // Conto le parole nella frase
     $modifiedWords_count = str_word_count($modifiedWords);
     // TEST Stampo la frase modificata
     //echo $modifiedWords
     ?>
 
-    <h3>La frase inserita è composta da <?php echo $word_count ?> parole</h3>
-    <p><?php echo $words ?></p>
+    <section>
+        <h3>La frase inserita è composta da <?php echo $word_count ?> parole.</h3>
+        <p><?php echo $words ?></p>
 
-    <h3>La frase modificata è composta da <?php echo $modifiedWords_count ?> parole</h3>
-    <p><?php echo $modifiedWords ?></p>
+        <h3>La frase modificata è composta da <?php echo $modifiedWords_count ?> parole.</h3>
+        <p><?php echo $modifiedWords ?></p>
+    </section>
+
 </body>
 
 </html>
